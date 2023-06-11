@@ -1,0 +1,306 @@
+#NUM = DATA (HORARIO DE PUSH) NOME: (NUM é o número da entrada do changelog)
+    - mudanças
+
+#69 = 09/12/2022 (23:39) Gian
+    - The last changelog!
+
+#68 = 09/12/2022 (17:15) Augusto
+    - Modificando o código para conseguir gerar o executável
+
+#67 = 09/12/2022 (08:12) Gian
+    - Hierarquização dos efeitos visuais (nova classe abstrata)
+    - Novo singleton (não consegui pensar em um jeito melhor) GFXManager no gfxmanager.py
+    - Mudança de algumas constante de gameplay
+    - Comentadas as linhas que atualizam o debug (i.e. debug desativado)
+
+#66 = 08/12/2022 (22:46) Augusto
+    - Arrumando a atualização dupla de alguns estados
+    - Ajustando as velocidades das entidades
+    - Refatorando a classe Particle para ela armazenar a sua cor
+    - Refatorando a classe Tracer para não se auto deletar
+    - Arrumando o método Destroy do Asteroid (ele estava criando novos
+      asteroids com a angulação errada)
+
+#65 = 07/12/2022 (19:42) Micael
+    - Renomeando os controladores para gerenciadores (Managers)
+    - Criando pastas para os pickups e as bullets
+    - Arrumando os imports e linhas de código afetadas por causa disso
+
+#64 = 07/12/2022 (0:36) Augusto
+    - Criação da classe JukeBox para tocar músicas sem parar
+
+#63 = 07/12/2022 (00:07) Augusto
+    - Melhorando a lógica das particulas
+
+#62 = 06/12/2022 (22:30) Augusto
+    - Melhorando ainda mais a detecção de colisão (comentado o for que detecta colisões já contabilizadas)
+        - É bom ainda verificar se está certo
+
+#61 = 06/12/2022 (10:42) Micael
+    - Adicionando pickup da PiercingBullet
+        - Organizando também um pouco mais o código
+
+#60 = 06/12/2022 (05:35) Gian
+    - Mudanças nas músicas (melhor ver in-game)*
+    - Collision detector agora tem n² - 2n passos, ao invés de n² (se minhas contas estiverem certas)
+    - Tracer do player implementado (necessita de ajustes)
+    - Levemente acelerado o player, asteroids e aliens (eu fielmente acredito que está melhor agora)
+    - Leve mudança nas partículas (agoras elas piscam colorido e não resetam na troca de estado, melhor ver in-game)
+    - Screen size aumentada para 1024x768
+    - Pequenos ajustes espalhados pelo código (pensando em legibilidade)
+
+    * Pode-se trocar a música indo para o scoreboard e voltando ao menu, porém isto não deveria ser o caso. 
+    Note que a escolha é aleatória e pode acabar repetindo a música. Também é preciso fazer uma lógica para 
+    escolher uma nova música quando a atual termina.
+
+#59 = 04/12/2022 (15:40) Augusto
+    - Arrumando o StateScoreBoard, pois não estava atualizando a cada jogo o quadro de pontuações
+
+#58 = 03/12/2022 (23:50) Augusto
+    - Colocando fundo nas telas
+        - Criação de particulas e criação de geradores e destruidores delas
+        - Alguns bugs de natureza indeterminada (mas já foram aparentemente consertados)
+
+#57 = 03/12/2022 (18:58) Augusto
+    - Pequena refatoração de como é desenhada as entidades
+
+#56 = 03/12/2022 (16:54) Micael
+    - Colocando sprites nos pickups e arrumando bug de colisão deles
+
+#55 = 03/12/2022 (15:33) Augusto
+    - Trocando alguns efeitos sonoros
+
+#54 = 03/12/2022 (12:41) Augusto
+    - Arrumando os sons
+
+#53 = 02/12/2022 (17:50) Augusto
+    - Arrumando os bugs ocasionados pelo sistema de som
+
+#52 = 02/12/2022 (11:12) Micael
+    - Quase terminando a implementacao de som
+
+#51 = 29/11/2022 (11:22) Micael
+    - Iniciando a implementacao do sistema de som   
+
+#50 = 29/11/2022 (10:10) Gian
+    - Protótipo Score Board
+
+#49 = 28/11/2022 (15:05) Augusto
+    - Começando a implementar o StatusReporter do player
+        - Próximas atualizações já é possível tirar a renderização do debug
+
+#48 = 27/11/2022 (22:43) Augusto
+    - Pequenos ajustes nos states
+
+#47 = 27/11/2022 (21:55) Augusto
+    - Melhorando a interface do menu
+
+#46 = 27/11/2022 (21:18) Augusto
+    - Quase finalizado o menu
+        - Falta apenas melhorar a estética
+
+#45 = 27/11/2022 (21:05) Augusto
+    - Inicio da implementação do GUI
+
+#44 = 25/11/2022 (14:10) Gian
+    - Modo Pickup 
+
+#43 = 22/11/2022 (11:29) Micael
+    - Criando os ultimos pickups
+        - Falta colocar tempo de vida para os pickups
+
+#42 = 22/11/2022 (11:02) Augusto
+    - Criando mais alguns pickups
+
+#41 = 22/11/2022 (10:23) Micael
+    - Melhoria do modo Alien e Asteroid
+
+#40 = 22/11/2022 (09:40) Micael
+    - Comentando o código
+
+#39 = 21/11/2022 (08:47) Micael
+    - Concluindo tipagem
+
+#38 = 18/11/2022 (19:16) Gian
+    - Continuando tipagem (99% pronto)
+
+#37 = 18/11/2022 (11:24) Micael
+    - Início da tipagem
+        - Parei no utility.data.score
+
+#36 = 18/11/2022 (9:34) Augusto
+    - Atualizando requirements
+
+#35 = 15/11/2022 (12:35) Augusto
+    - Começando a implementar os pickups
+        - Por enquanto está na fase teste, futuramente seria interessante não precisar verificar a tipagem do player
+        no método on_collision do pickups
+    
+#34 = 15/11/2022 (9:17) Augusto
+    - Excluindo o GameController
+        - Era um singleton e não ajudava em nada
+    - Refatoração do LevelController
+        - Agora ele só checa se o player está morto
+    - A mudança de estado estará implementada toda no handle_transition de cada estado
+
+#33 = 13/11/2022 (21:14) Micael
+    - Criando modo alien, modo asteroid e modo dodge
+    - Arrumando bug debug
+
+#32 = 12/11/2022 (9:20) Augusto
+    - Criando fábricas de player para facilitar a configuração de cada modo
+
+#31 = 12/11/2022 (22:05) Augusto
+    - Início de como será feito os outros modos
+        - Adição de novas classes states
+
+#30 = 12/11/2022 (21:45) Augusto
+    - Melhorando o sistema de carregamento de imagem
+
+#29 = 12/11/2022 (20:20) Augusto
+    - Arrumando constantes
+
+#28 = 11/11/2022 (10:55) Micael
+    - Arrumando ScoreManager definitivamente
+    - Mudança nos métodos exit e entry do ingame e inendgame
+
+#27 = NOV 06/11/2022 (19:33) Augusto
+    - Adicionando as sprites das entidades (futuramente refatorar o carregamento delas)
+    - Arrumando bug de colisões iguais criado nas últimas modificações (changelog #25)
+    
+#26 = NOV 06/11/2022 Augusto
+    - Modificações nas classes que tratam as colisões
+    - Pequenas alterações no ScoreManager e no Debug
+
+#25 = OUT 31(22:52) Micael:
+    - Aumentando velocidade dos asteroides conforme o tempo
+
+#24 = OUT 28 (19:25) Gian: 
+    - Entrada de texto do player
+    - Métodos no ScoreManager para gerar ScoreLog e salvar no disco (NÃO funcionam - ver FIXME de ScoreManager)
+
+#23 = OUT 25 (22:55) Micael:
+    - Criada as classes para persistência de dados(DAO)
+
+#22 = OUT 25 (09:55) Gian:
+    - Mais alguma refatoração (especialmente no debug)
+
+#21 = OUT 25 (00:20) Augusto:
+    - Começo do StateInEndGame
+    - Alguma refatoração
+
+#20 = OUT 24 (22:40) Gian:
+    - Verificação das vidas do player e transição de state de acordo
+    - Criada GameController
+    - Criado Board
+
+#19 = OUT 21 (22:30) Gian:
+    - Asteroid spawner implementado
+    - StateInGame atualizado
+
+#18 = OUT 21 (21:54) Gian:
+    - Classe para Debug
+    - Constantes para cores
+
+#17 = OUT 21 (20:57) Micael:
+    - Aliens estão sendo gerado aleatoriamente
+
+#16 = OUT 21 (11:02) Micael:
+    - Tirado bullet_tag_checks
+    - Alien agora faz tiros aleatórios na tela
+
+#15 = OUT 21 (10:16) Gian:
+    - Infos de Debug adcionais
+    - Menos spam de prints no terminal
+
+#14 = OUT 20 (23:50) Augusto:
+    - Criação quase completa da classe alien
+    - Modificação de como funciona a lógica de tiro
+        - Criação de uma interface Shooter (atirador)
+    - Adição de mais constantes
+
+#13 = OUT 20 (22:06) Gian:
+    - Criada AlienFactory
+
+#12 = OUT 19 (21:50) Gian:
+    - Checklist para dia 04 do novembro
+    - Ajustes benignos
+
+#11 = OUT 19 (20:50) Gian:
+    - Agora estamos checando entity tags em CollisionManager para evitar de aglutinar a lista de colisões (possivelmente resolvendo o lag)
+    - Consertado uma tipagem de stateinmenu
+
+#10 = OUT 19 (20:30) Micael:
+    - Criado factory de player
+    - Afunilando causa do lag(numero de colisoes registradas)
+    - UML está mais atualizado
+
+#9 = OUT 19 (19:12) Gian:
+    - Renomeando constantes para algo mais natural
+
+#8 = OUT 14 (22:30) Augusto:
+    - Adicionando as constantes no arquivo constantes
+        - Ainda falta algumas
+    - O bug de lag ainda persiste no jogo, ainda mais com um monte de asteroid
+        - Causa ainda desconhecida
+
+#7 = OUT 14 (21:30) Gian:
+    - Não eram colisões repetidas, o asteroid que estava bugado: asteroids SMALL não sumiam ao colidir, criavam outros asteroids;
+        isso entupia a lista de entidades e fazia a verificação de colisão ficar "entupida"
+    - Tags de entidades agora estão em constants.py
+    - Refatorada de construtores com as novas tags
+    - on_collision das entidades
+    - troca de bullets (1 2 3 4)
+    - troca de armas (q w e r)
+
+#6 = OUT 14 (20:20) Augusto:
+    - Está pior que antes
+        - Permanencia do bug de colisão repetida
+
+#5 = OUT 14 (19:40) Augusto:
+    - Organizando alguns arquivos
+    - Criação da arma shotgun
+        - Surgimento de novos bugs de delay por causa disso
+    - Mudança de interface da factory de bala
+
+#4 = OUT 14 (10:50) Augusto:
+    - Teste das modificações anteriores
+    - Consertado alguns bugs
+    - Modificação da classe StateInGame para iniciar as entidades
+
+#3 = OUT 14 (9:50) Augusto:
+    - Modificando como tratar as colisões do jogo
+        - Criacao da classe CollisionManager e modificacao do nome de CollisionController para CollisionDetection
+        - Os controllers estão agora como singletons
+    - Não foi testado, pois a versão do python do computador do laboratorio é antiga
+
+#2 = OUT 13 (16:10) Gian:
+    - AbstractEntity renomeado como Entity 
+    - Mudanças no collisioncontroller e entitiescontroller:
+        - collisioncontroller:
+            Agora todas as colisões são detectadas num dado frame, e o mesmo método que detecta armazena, num set, todas
+            as entidades que colidiram. Depois, é chamado o método para percorrer esse set e chamar o on_collision de cada 
+            entidade. Depois, mais um método para limpar o conjunto de colisões armazenadas.
+            A ideia é garantir que todas as colisões são detectadas antes de se começar a chamar os on_collision, e que
+            não haveriam entidades duplicadas no buffer de colisões.
+
+        - entitiescontroller:
+            Parecido com o collisioncontroller, agora tem um buffer para a remoção de entidades. Qualquer entidade pode 
+            chamar um metodo register_deletion da entitiescontroller que adciona esta entidade num set. Este set então é 
+            percorrido pelo método handle_deletion e então o set é limpo por um metodo flush_deletion_buffer
+
+        No código, a implementação pode ser observada nos métodos on_collision das entities, no handle_update() do game
+        e nos próprios arquivos collisioncontroller e entitiescontroller.
+
+#1 = OUT 13 (14:53) Gian:
+    - PiercingBulletFactory e PersistentBulletFactory implementadas
+    - Tipagem parametros em weapon.set_bullet_factory() e weapon.set_time_since_last_shot()
+    - Corrigindo gramática em player (plural de life é lives e não lifes)
+    - Tipagem de parametro em entitiescontroller
+
+#0 = OUT 13 (12:03) Gian:
+    - implementação de RubberBulletFactory
+    - correção do código de rubberbullet.move() (estava usando a forma antiga, não chamava body.move())
+    - rubberbullet.update() implementado
+    - tipagem dos parametros value de body.move e body.accelerate
+    - melhoria na legibilidade dos bulletfactory.create() concretos e no construtor do player em Game.init()
